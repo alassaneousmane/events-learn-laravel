@@ -11,10 +11,13 @@
 |
 */
 
+use App\Event;
+
 Route::get('/', function () {
 
 
-	$events = App\Event::all();
+	$events = Event::all();
+	
 
 	return view('events.index')->withEvents($events);
 });

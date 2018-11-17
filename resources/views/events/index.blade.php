@@ -10,10 +10,16 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
+    <style type="text/css">
+        .bling {
+            background-color: orange;
+        }
+    </style>
 
     </head>
     <body>
-        <h1>{{ count($events) }} Events</h1>
+
+        <h1>{{ $events->sum('price') }} Events</h1>
 
 
 			@foreach($events as $event)
@@ -22,9 +28,12 @@
                     <p>{{ $event->description }}</p>
                     <p>{{ $event->price }} EUR</p>
                     <p>{{ $event->location }}</p>
-                    <hr>
+                    @if(! $loop->last)
+                        <hr>
+                    @endif
                 </article>
             @endforeach
+        }
 
     </body>
 </html>
