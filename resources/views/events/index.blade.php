@@ -19,21 +19,22 @@
     </head>
     <body>
 
-        <h1>{{ $events->sum('price') }} Events</h1>
+        <h1>{{ $events->count() }} Events</h1>
 
 
 			@foreach($events as $event)
                 <article>
-                    <h1>#{{ $event->name }}</h1>
+                    <h1># {{ $event->name }}</h1>
                     <p>{{ $event->description }}</p>
-                    <p>{{ $event->price }} EUR</p>
-                    <p>{{ $event->location }}</p>
+                    <p>{!! $formatPrice($event) !!}</p>
+                    <p>Lieu : {{ $event->location }}</p>
+                    <p>Date : {{ $formatDate($event->start_at) }}</p>
                     @if(! $loop->last)
                         <hr>
                     @endif
                 </article>
             @endforeach
-        }
+        
 
     </body>
 </html>

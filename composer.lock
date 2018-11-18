@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a875862ccc0c27fcee12c6892c3e2b32",
+    "content-hash": "7080bfb7d2cb7b0c9874765e93b61965",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -742,6 +742,55 @@
                 "storage"
             ],
             "time": "2018-10-15T13:53:10+00:00"
+        },
+        {
+            "name": "mercuryseries/laravel-helpers",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mercuryseries/laravel-helpers.git",
+                "reference": "d62fd82e83a0679a02460cfef3d4ef40342f35f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mercuryseries/laravel-helpers/zipball/d62fd82e83a0679a02460cfef3d4ef40342f35f6",
+                "reference": "d62fd82e83a0679a02460cfef3d4ef40342f35f6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MercurySeries\\Helpers\\HelpersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MercurySeries\\Helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Honore Hounwanou",
+                    "email": "mercuryseries@gmail.com"
+                }
+            ],
+            "description": "Dynamic Method Helpers",
+            "keywords": [
+                "helpers",
+                "laravel",
+                "methods"
+            ],
+            "time": "2017-10-21T01:21:34+00:00"
         },
         {
             "name": "monolog/monolog",

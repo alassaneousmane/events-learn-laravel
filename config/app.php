@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        MercurySeries\Helpers\HelpersServiceProvider::class,
         /*
          * Application Service Providers...
          */
