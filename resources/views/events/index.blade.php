@@ -19,7 +19,7 @@
     </head>
     <body>
 
-        <h1>{{ $events->count() }} Events</h1>
+        <h1>{{ $events->count() }} Events # {{ $events->sum('price')}} EUR</h1>
 
 
 			@foreach($events as $event)
@@ -27,6 +27,7 @@
                     <h1># {{ $event->name }}</h1>
                     <p>{{ $event->description }}</p>
                     <p>{!! $formatPrice($event) !!}</p>
+                    <p><strike>Fake Price : {{ $event->fake_price }} EUR </strike></p>
                     <p>Lieu : {{ $event->location }}</p>
                     <p>Date : {{ $formatDate($event->start_at) }}</p>
                     @if(! $loop->last)

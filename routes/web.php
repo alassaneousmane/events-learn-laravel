@@ -40,7 +40,7 @@ Route::get('/', function () {
 // 		'price' => 50,66
 // 	]
 // );
-
+	
 	$events = Event::all();
 	
 
